@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Joke App</title>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Joke App</h1>
+
+   <div id="displayArea" class="space">
+   <form method="post" action="/getjoke">
+    <label for="jokeInput">Display Joke:</label>
+        <h2>
+       
+           <%=joke %>
+      </h2>
+       
+      
+        <button type="submit"  name="requestJoke" >
+        Get Joke
+        </button>
+    </form>
+    </div>
+   <div id="postArea" class="space">
+    <form method="post" action="/postjoke">
+      <label for="jokeInput">Request Joke Based on Categories e.g Programming,Misc,Any:</label><br>
+      <input type="text" name="requestJoke" class="requestJokeArea" >
+        <br>
+      <input type="submit" value="submit" name="submitJoke">
+      
+    </form>
+
+
+    
+  </div>
+</body>
+</html>
